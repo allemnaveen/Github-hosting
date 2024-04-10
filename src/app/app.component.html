@@ -1,0 +1,31 @@
+<div>
+  <h1>User Data</h1>
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.address.address }}, {{ user.address.city }}, {{ user.address.state }}</td>
+        <td>{{ user.company.name }}, {{ user.company.department }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
